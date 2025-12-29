@@ -28,4 +28,8 @@ public class BookController {
         this.bookService.addBook(book);
         return book;
     }
+    @DeleteMapping("/books/{id}")
+    public List<Book> deleteBook(@PathVariable("id") int id){
+        return this.bookService.deleteBook(id);
+    }
 }
